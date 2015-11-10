@@ -1,0 +1,21 @@
+<div class="small-container well">
+  <div class="bold">
+    What do you want to do today?
+  </div>
+
+  <div class="margin-top-20">
+    <input type="text" class="form-control" placeholder="Your todo..." data-ng-model="todo"/>
+  </div>
+
+  <div class="margin-top-20">
+    <button type="button" id="submit-todo" class="btn btn-primary" data-ng-click="submitTodo();">Submit Todo</button>
+  </div>
+</div>
+
+<div id="todo-list" class="small-container" >
+  <ol >
+    <li data-ng-repeat="item in items" data-ng-class="myVar">{{item.todo}} 
+    <a href="#" data-ng-click="myVar='strike'">Delete</a>
+    </li>
+  </ol>
+</div>

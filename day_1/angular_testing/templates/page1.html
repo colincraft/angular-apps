@@ -1,0 +1,52 @@
+
+    <!-- Attach model -->
+    <input type="text" data-ng-model="userText" />
+
+    <div>
+        {{ userText }}
+    </div>
+
+    <table>
+        <thead>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+            <th>Username</th>
+        </thead>
+
+        <tbody>
+            <tr data-ng-repeat="user in users">
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.username}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <div>
+        <div>First Name:</div>
+        <div>
+            <input type="text" placeholder="First Name" data-ng-model="userData.firstname">   
+        </div>
+        <div>Last Name:</div>
+        <div>
+            <input type="text" placeholder="Last Name" data-ng-model="userData.lastname">   
+        </div>
+        <div>Age:</div>
+        <div>
+            <input type="text" placeholder="Age" data-ng-model="userData.age">   
+        </div>
+        <div>User Name:</div>
+        <div>
+            <input type="text" placeholder="User Name" data-ng-model="userData.username">   
+        </div>
+        <div>
+            <button type="button" data-ng-click="submitUser();">Submit User</button>
+        </div>
+    </div>
+
+
+
+    <test-directive></test-directive>
